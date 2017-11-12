@@ -6,7 +6,7 @@
 /*   By: bhalderm <bhalderm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 14:31:01 by bhalderm          #+#    #+#             */
-/*   Updated: 2017/11/10 16:45:43 by bhalderm         ###   ########.fr       */
+/*   Updated: 2017/11/11 18:14:20 by bhalderm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,13 @@ int		main(int argc, char **argv)
 		mapsize = ft_grid(piece);
 		grid = ft_strnew(mapsize * (mapsize + 1));
 		ft_mapmaker(grid, array, mapsize, piece);
+		ft_putchar_fd('\n', 1);
 	}
-	ft_putchar_fd('\n', 1);
+	else
+	{
+		ft_putstr("usage: ");
+		ft_putstr(argv[0]);
+		ft_putstr(" target_file\n");
+	}
 	return (0);
 }
